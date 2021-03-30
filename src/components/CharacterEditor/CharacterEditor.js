@@ -18,7 +18,7 @@ import {
 } from './CharacterEditor.helpers';
 import styles from './CharacterEditor.module.css';
 
-function App() {
+function CharacterEditor() {
   const [body, setBody] = React.useState(0);
   const [head, setHead] = React.useState(0);
   const [face, setFace] = React.useState(0);
@@ -30,6 +30,9 @@ function App() {
 
   return (
     <main className={styles.characterEditor}>
+      <div className={styles.perspectiveDecorationWrapper}>
+      <div className={styles.perspectiveDecoration}></div>
+      </div>
       <MaxWidthWrapper className={styles.maxWidthWrapper}>
         <header className={styles.header}>
           <h1 className={styles.title}>Create your Character</h1>
@@ -92,4 +95,4 @@ function App() {
   );
 }
 
-export default App;
+export default CharacterEditor;
